@@ -1,0 +1,7 @@
+The Citavi Import Plugin
+===========================
+
+Created by Achim Kramer
+
+Requires calibre >= 0.7.53
+
