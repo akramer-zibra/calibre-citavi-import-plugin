@@ -12,7 +12,7 @@ if False:
     # You do not need this code in your plugins
     get_icons = get_resources = None
 
-from PyQt5.Qt import QDialog, QVBoxLayout, QPushButton, QMessageBox, QLabel
+from PyQt5.Qt import QDialog, QVBoxLayout, QPushButton, QMessageBox, QLabel, QFileDialog
 
 from calibre_plugins.citavi_import_plugin.config import prefs
 
@@ -40,6 +40,13 @@ class ImportDialog(QDialog):
         self.setWindowTitle('Citavi Import Plugin')
         self.setWindowIcon(icon)
 
+        # Defines Filepicker for import file
+        self.import_file = QFileDialog()
+        self.import_file.setNameFilter("Files (*.bib)") # Only allow .bib files to be loaded
+        self.l.addWidget(self.import_file)
+        # 
+
+        '''
         self.about_button = QPushButton('About', self)
         self.about_button.clicked.connect(self.about)
         self.l.addWidget(self.about_button)
@@ -63,6 +70,7 @@ class ImportDialog(QDialog):
                 'Configure this plugin', self)
         self.conf_button.clicked.connect(self.config)
         self.l.addWidget(self.conf_button)
+        '''
 
         self.resize(self.sizeHint())
 
