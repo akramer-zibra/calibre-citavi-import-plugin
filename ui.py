@@ -16,7 +16,8 @@ if False:
 from calibre.gui2.actions import InterfaceAction
 
 # Our custom plugin dialog code
-from calibre_plugins.citavi_import_plugin.dialog import ImportDialog
+## from calibre_plugins.citavi_import_plugin.dialog import ImportDialog
+from calibre_plugins.citavi_import_plugin.wizard import ImportWizard
 
 class ImportPlugin(InterfaceAction):
 
@@ -61,7 +62,7 @@ class ImportPlugin(InterfaceAction):
         # self.gui is the main calibre GUI. It acts as the gateway to access
         # all the elements of the calibre user interface, it should also be the
         # parent of the dialog
-        d = ImportDialog(self.gui, self.qaction.icon(), do_user_config)
+        d = ImportWizard(self.gui, self.qaction.icon(), do_user_config)
         d.show()
 
     def apply_settings(self):
