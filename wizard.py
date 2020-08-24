@@ -14,13 +14,12 @@ class ImportWizard(QWizard):
     # Cache db reference
     self.db = gui.current_db
 
-    # Configure wizard
-    self.setWindowTitle('Citavi Import Plugin')
-    self.setWindowIcon(icon)
+    # Configure wizard window
+    self.setWindowTitle('Citavi Import Plugin')    
     
     # Define wizard with its pages
     # AND pass calibre config and db to this pages
-    self.addPage(FilepickPage.create(self.db))
+    self.addPage(FilepickPage.build(self, self.db))
        
 
 
