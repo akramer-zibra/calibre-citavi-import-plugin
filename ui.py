@@ -17,7 +17,7 @@ from calibre.gui2.actions import InterfaceAction
 
 # Our custom plugin dialog code
 ## from calibre_plugins.citavi_import_plugin.dialog import ImportDialog
-from calibre_plugins.citavi_import_plugin.wizard import ImportWizard
+from calibre_plugins.citavi_import_plugin.steps.filepick import FilepickStep
 
 class ImportPlugin(InterfaceAction):
 
@@ -62,8 +62,9 @@ class ImportPlugin(InterfaceAction):
         # self.gui is the main calibre GUI. It acts as the gateway to access
         # all the elements of the calibre user interface, it should also be the
         # parent of the dialog
-        d = ImportWizard(self.gui, self.qaction.icon(), do_user_config)
-        d.show()
+        
+        # Start with filepick step
+        FilepickStep.create(self, self.gui.current_db)
 
     def apply_settings(self):
         from calibre_plugins.citavi_import_plugin.config import prefs
