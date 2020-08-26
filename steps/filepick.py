@@ -11,7 +11,7 @@ class FilepickStep():
   """ Protected constructor method """
   def __init__(self, create_key, parent, db):
     assert(create_key == FilepickStep.__create_key), \
-        "FilepickStep objects must be created using FilepickStep.build"
+        "FilepickStep objects must be created using FilepickStep.create"
     
     # Dependency injection
     self.parent = parent
@@ -32,5 +32,5 @@ class FilepickStep():
 
   ''' Factory Method for this page '''
   @classmethod
-  def build(cls, parent, db):
+  def create(cls, parent, db):
       return FilepickStep(cls.__create_key, parent, db)
