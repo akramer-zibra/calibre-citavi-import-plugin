@@ -1,4 +1,3 @@
-
 from PyQt5.Qt import QWizardPage, QVBoxLayout, QLabel, QFileDialog, QDialog
 
 # Import logging code
@@ -53,4 +52,4 @@ class FilepickStep():
   ''' Factory Method for this page '''
   @classmethod
   def build(cls, parent, db):
-      return FilepickPage(cls.__create_key, parent, db)
+      return FilepickStep(cls.__create_key, parent, db)
