@@ -1,7 +1,7 @@
 
 from PyQt5.Qt import QWizard
 
-from calibre_plugins.citavi_import_plugin.pages.filepick import FilepickPage
+from calibre_plugins.citavi_import_plugin.steps.filepick import FilepickStep
 
 class ImportWizard(QWizard): 
 
