@@ -1,6 +1,6 @@
 [submodule "libs/PythonBibtexparser"]
 	path = libs/PythonBibtexparser
-	url = https://github.com/sciunto-org/python-bibtexparser.git
+	url = https://github.com/sciunto-org/python-bibtexparser
 [submodule "libs/PyEventEmitter"]
 	path = libs/PyEventEmitter
 	url = https://github.com/etissieres/PyEventEmitter
